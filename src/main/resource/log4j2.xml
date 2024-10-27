@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <!-- Define Appenders: where the logs will be written (e.g., console, file) -->
+    <Appenders>
+        <!-- Console Appender for logging to the console -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+        <!-- File Appender for logging to a file -->
+        <File name="FileAppender" fileName="logs/app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
+    </Appenders>
+
+    <!-- Define Loggers: loggers for various parts of the application -->
+    <Loggers>
+        <!-- Root logger: applies to all logs not caught by other loggers -->
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="FileAppender" />
+        </Root>
+
+        <!-- Logger for a specific package or class -->
+        <Logger name="com.example" level="debug" additivity="false">
+            <AppenderRef ref="ConsoleAppender" />
+        </Logger>
+    </Loggers>
+
+</Configuration>

@@ -1,0 +1,3 @@
+2024-10-21 11:04:52 [main] INFO  LogerDemo - for info only
+2024-10-21 11:04:52 [main] WARN  LogerDemo - warning msg
+2024-10-21 11:04:52 [main] ERROR LogerDemo - error msg
