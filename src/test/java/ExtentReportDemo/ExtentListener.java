@@ -44,7 +44,7 @@ public class ExtentListener implements ITestListener {
         test = reports.createTest(result.getName());
         System.out.println("Test started: " + result.getName());
     }
-
+  
     @Override
     public void onTestSuccess(ITestResult result) {
         // Log success in the report
